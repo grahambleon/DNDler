@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Button from '../components/Button.js'
 
 const StyledButtonContainer = styled.div`
   text-align: center;
@@ -7,10 +8,16 @@ const StyledButtonContainer = styled.div`
 `
 
 class ButtonContainer extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      clicked: false
+    }
+  }
   render() {
     return(
       <StyledButtonContainer>
-        [BUTTON]
+        <Button />
       </StyledButtonContainer>
     )
   }
