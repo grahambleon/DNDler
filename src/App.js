@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const StyledTitle = styled.div`
+  text-align: center;
+`
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <StyledTitle>
         WELCOME TO THE DNDLER
-      </div>
+      </StyledTitle>
     );
   }
 }
