@@ -1,6 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import App from './App';
+
+it('renders', () => {
+  shallow(<App />)
+})
 
 it('renders correctly', () => {
   const tree = renderer
