@@ -3,19 +3,23 @@
 exports[`renders correctly 1`] = `
 Array [
   <div
-    className="sc-bwzfXH elIgVK"
+    className="sc-htpNat kQjzks"
   >
     WELCOME TO THE DNDLER
   </div>,
   <div
-    className="sc-htpNat blZjcx"
+    className="sc-bxivhb esVBWD"
   >
     -How to use the DNDler
   </div>,
   <div
-    className="sc-bdVaJa CIYkB"
+    className="sc-bwzfXH jxKnug"
   >
-    [BUTTON]
+    <div
+      className="sc-bdVaJa CIYkB"
+    >
+      [BUTTON]
+    </div>
   </div>,
 ]
 `;
