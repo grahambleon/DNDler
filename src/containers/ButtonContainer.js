@@ -13,11 +13,27 @@ class ButtonContainer extends Component {
     this.state = {
       clicked: false
     }
+    this.showDndl = this.showDndl.bind(this)
   }
+
+  showDndl() {
+    this.setState({
+      clicked: true
+    })
+  }
+
   render() {
+    let shownComponent
+
+    if (this.state.clicked) {
+      shownComponent = '[DNDled Character]'
+    } else {
+      shownComponent = <Button />
+    }
+
     return(
-      <StyledButtonContainer>
-        <Button />
+      <StyledButtonContainer onClick={this.showDndl}>
+        {shownComponent}
       </StyledButtonContainer>
     )
   }
