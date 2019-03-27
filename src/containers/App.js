@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import ButtonContainer from './ButtonContainer.js'
 
 const Title = styled.div`
   text-align: center;
@@ -22,6 +23,7 @@ class App extends Component {
         <Instructions>
           -How to use the DNDler
         </Instructions>
+        <ButtonContainer />
       </>
     );
   }
