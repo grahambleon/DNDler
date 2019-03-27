@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Button from '../components/Button.js'
+import CharacterSheet from '../components/CharacterSheet.js'
 
 const StyledButtonContainer = styled.div`
   text-align: center;
@@ -26,7 +27,7 @@ class ButtonContainer extends Component {
     let shownComponent
 
     if (this.state.clicked) {
-      shownComponent = '[DNDled Character]'
+      shownComponent = <CharacterSheet />
     } else {
       shownComponent = <Button />
     }
