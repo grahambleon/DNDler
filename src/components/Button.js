@@ -10,7 +10,11 @@ const StyledButton = styled.img`
 
 const Button = (props) => {
   return(
-    <StyledButton src={d20} onClick={props.startCharacterRoll}/>
+    <StyledButton
+      src={d20}
+      alt='Choose your fate...'
+      onClick={props.startCharacterRoll}
+    />
   )
 }
 
