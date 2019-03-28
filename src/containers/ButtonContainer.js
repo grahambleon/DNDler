@@ -25,11 +25,11 @@ class ButtonContainer extends Component {
 
   render() {
     return(
-      <StyledButtonContainer onClick={this.startCharacterRoll}>
+      <StyledButtonContainer>
         {this.state.clicked?(
           <CharacterSheet />
         ):(
-          <Button />
+          <Button startCharacterRoll={this.startCharacterRoll}/>
         )}
       </StyledButtonContainer>
     )

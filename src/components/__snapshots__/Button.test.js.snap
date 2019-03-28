@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="sc-bdVaJa CIYkB"
->
-  [BUTTON]
-</div>
+<img
+  className="sc-bdVaJa bymLFr"
+  src="d20.png"
+/>
 `;
