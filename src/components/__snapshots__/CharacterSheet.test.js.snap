@@ -4,6 +4,10 @@ exports[`renders correctly 1`] = `
 <div
   className="sc-bdVaJa CIYkB"
 >
-  [DNDled Character]
+  Gnome
+  , 
+  Sorcerer
+  , 
+  Outlander
 </div>
 `;
