@@ -6,24 +6,24 @@ exports[`renders correctly 1`] = `
 >
   <p>
     Race: 
-    Human
+    Half-Orc
   </p>
   <p>
     Class: 
-    Druid
+    Paladin
   </p>
   <p>
     Background: 
-    Knight
+    Gladiator
   </p>
   <p>
     Stats: 
-    14, 
-    11, 
-    11, 
-    10, 
     12, 
-    15
+    12, 
+    9, 
+    12, 
+    16, 
+    13
   </p>
   <button
     onClick={[Function]}
