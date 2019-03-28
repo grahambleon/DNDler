@@ -16,6 +16,7 @@ Array [
     className="sc-htpNat blZjcx"
   >
     <img
+      alt="Choose your fate..."
       className="sc-bdVaJa bymLFr"
       onClick={[Function]}
       src="d20.png"
