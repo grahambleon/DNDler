@@ -3,17 +3,18 @@
 exports[`renders correctly 1`] = `
 Array [
   <div
-    className="sc-htpNat kQjzks"
+    className="sc-bxivhb hgtYVQ"
   >
     WELCOME TO THE DNDLER
   </div>,
   <div
-    className="sc-bxivhb esVBWD"
+    className="sc-ifAKCX jQlPKO"
   >
     -How to use the DNDler
   </div>,
   <div
-    className="sc-bwzfXH jxKnug"
+    className="sc-htpNat blZjcx"
+    onClick={[Function]}
   >
     <div
       className="sc-bdVaJa CIYkB"
