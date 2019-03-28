@@ -14,27 +14,23 @@ class ButtonContainer extends Component {
     this.state = {
       clicked: false
     }
-    this.showDndl = this.showDndl.bind(this)
+    this.startCharacterRoll = this.startCharacterRoll.bind(this)
   }
 
-  showDndl() {
+  startCharacterRoll() {
     this.setState({
       clicked: true
     })
   }
 
   render() {
-    let shownComponent
-
-    if (this.state.clicked) {
-      shownComponent = <CharacterSheet />
-    } else {
-      shownComponent = <Button />
-    }
-
     return(
-      <StyledButtonContainer onClick={this.showDndl}>
-        {shownComponent}
+      <StyledButtonContainer onClick={this.startCharacterRoll}>
+        {this.state.clicked?(
+          <CharacterSheet />
+        ):(
+          <Button />
+        )}
       </StyledButtonContainer>
     )
   }

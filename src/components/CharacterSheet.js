@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const StyledSheet = styled.div`
@@ -6,10 +6,26 @@ const StyledSheet = styled.div`
   margin: 10px;
 `
 
-const CharacterSheet = () => {
-  return(
-    <StyledSheet>[DNDled Character]</StyledSheet>
-  )
+class CharacterSheet extends Component {
+  // constructor(props){
+  //   super(props)
+  //   this.state = {
+  //
+  //   }
+  // }
+  // componentDidMount() {
+  //
+  // }
+
+  rollCharacter() {
+
+  }
+
+  render() {
+    return(
+      <StyledSheet>[DNDled Character]</StyledSheet>
+    )
+  }
 }
 
 export default CharacterSheet;
