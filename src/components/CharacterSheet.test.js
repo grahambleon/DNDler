@@ -6,10 +6,3 @@ import CharacterSheet from './CharacterSheet';
 it('renders', () => {
   shallow(<CharacterSheet />)
 })
-
-it('renders correctly', () => {
-  const tree = renderer
-    .create(<CharacterSheet />)
-    .toJSON()
-  expect(tree).toMatchSnapshot()
-})
