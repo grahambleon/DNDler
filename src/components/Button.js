@@ -1,14 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import d20 from '../assets/d20.png'
 
-const StyledButton = styled.div`
+const StyledButton = styled.img`
   text-align: center;
   margin: 10px;
+  max-width: 190px;
 `
 
-const Button = () => {
+const Button = (props) => {
   return(
-    <StyledButton>[BUTTON]</StyledButton>
+    <StyledButton
+      src={d20}
+      alt='Choose your fate...'
+      onClick={props.startCharacterRoll}
+    />
   )
 }
 

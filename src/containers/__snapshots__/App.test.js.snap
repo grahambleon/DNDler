@@ -14,13 +14,13 @@ Array [
   </div>,
   <div
     className="sc-htpNat blZjcx"
-    onClick={[Function]}
   >
-    <div
-      className="sc-bdVaJa CIYkB"
-    >
-      [BUTTON]
-    </div>
+    <img
+      alt="Choose your fate..."
+      className="sc-bdVaJa bymLFr"
+      onClick={[Function]}
+      src="d20.png"
+    />
   </div>,
 ]
 `;
