@@ -1,0 +1,18 @@
+body {
+  background-color: #FFFBDD;
+}
+
+body::after {
+  content: "";
+  background-image: url('/background.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.35;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
