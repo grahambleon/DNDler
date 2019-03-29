@@ -5,7 +5,12 @@ const sample = require('lodash.sample');
 
 const StyledSheet = styled.div`
   text-align: center;
-  margin: 10px;
+  margin: auto;
+  margin-bottom: 10%;
+  width: 60%;
+  padding: 2%;
+  background-color: rgba(160, 82, 44, .7);
+  box-shadow: 3px 3px 5px 8px rgba(160, 82, 44, .7);
 `
 
 class CharacterSheet extends Component {
@@ -57,13 +62,15 @@ class CharacterSheet extends Component {
     })
 
     return(
-      <StyledSheet>
-        <p>Race: {this.state.race}</p>
-        <p>Class: {this.state.class}</p>
-        <p>Background: {this.state.background}</p>
-        <p>Stats: {statList}</p>
+      <>
+        <StyledSheet>
+          <p>Race: {this.state.race}</p>
+          <p>Class: {this.state.class}</p>
+          <p>Background: {this.state.background}</p>
+          <p>Stats: {statList}</p>
+        </StyledSheet>
         <Button onClick={this.rollCharacter} />
-      </StyledSheet>
+      </>
     )
   }
 }
