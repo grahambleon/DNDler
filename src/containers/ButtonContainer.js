@@ -5,7 +5,7 @@ import CharacterSheet from '../components/CharacterSheet.js'
 
 const StyledButtonContainer = styled.div`
   text-align: center;
-  margin: 10px;
+  margin: 50px;
 `
 const Instructions = styled.div`
   text-align: center;
@@ -35,7 +35,7 @@ class ButtonContainer extends Component {
         ):(
           <>
             <Instructions>
-              -How to use the DNDler
+              Roll the dice and choose your fate...
             </Instructions>
             <Button startCharacterRoll={this.startCharacterRoll}/>
           </>
