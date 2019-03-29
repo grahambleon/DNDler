@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <img
-  className="sc-bdVaJa juMMxF"
+  className="sc-bdVaJa kpUueE"
   src="d20.png"
 />
 `;

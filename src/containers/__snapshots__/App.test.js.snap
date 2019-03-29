@@ -3,20 +3,20 @@
 exports[`renders correctly 1`] = `
 Array [
   <div
-    className="sc-EHOje hRETJx"
+    className="sc-ifAKCX kTaYdD"
   >
     WELCOME TO THE DNDLER
   </div>,
   <div
-    className="sc-bxivhb jOxwUP"
+    className="sc-htpNat fYpaVb"
   >
     <div
-      className="sc-ifAKCX jQlPKO"
+      className="sc-bxivhb esVBWD"
     >
       Roll the dice and choose your fate...
     </div>
     <img
-      className="sc-bdVaJa juMMxF"
+      className="sc-bdVaJa kpUueE"
       onClick={[Function]}
       src="d20.png"
     />

@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import d20 from '../assets/d20.png';
+import Button from './Button.js'
 const sample = require('lodash.sample');
 
 const StyledSheet = styled.div`
   text-align: center;
-  margin: 10px;
-`
-const RerollButton = styled.div`
-  text-align: center;
   margin: auto;
-  background-image: url(${d20});
-  background-size: cover;
-  width: 139px;
-  height: 160px;
-  resize: both;
-  border-width: 2px;
-  border: black;
+  margin-bottom: 10%;
+  width: 60%;
+  padding: 2%;
+  background-color: rgba(160, 82, 44, .7);
+  box-shadow: 3px 3px 5px 8px rgba(160, 82, 44, .7);
 `
 
 class CharacterSheet extends Component {
@@ -68,13 +62,15 @@ class CharacterSheet extends Component {
     })
 
     return(
-      <StyledSheet>
-        <p>Race: {this.state.race}</p>
-        <p>Class: {this.state.class}</p>
-        <p>Background: {this.state.background}</p>
-        <p>Stats: {statList}</p>
-        <RerollButton onClick={this.rollCharacter} />
-      </StyledSheet>
+      <>
+        <StyledSheet>
+          <p>Race: {this.state.race}</p>
+          <p>Class: {this.state.class}</p>
+          <p>Background: {this.state.background}</p>
+          <p>Stats: {statList}</p>
+        </StyledSheet>
+        <Button onClick={this.rollCharacter} />
+      </>
     )
   }
 }
