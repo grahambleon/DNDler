@@ -7,6 +7,10 @@ const StyledButtonContainer = styled.div`
   text-align: center;
   margin: 10px;
 `
+const Instructions = styled.div`
+  text-align: center;
+  margin: 10px;
+`
 
 class ButtonContainer extends Component {
   constructor(props) {
@@ -29,7 +33,12 @@ class ButtonContainer extends Component {
         {this.state.clicked?(
           <CharacterSheet />
         ):(
-          <Button startCharacterRoll={this.startCharacterRoll}/>
+          <>
+            <Instructions>
+              -How to use the DNDler
+            </Instructions>
+            <Button startCharacterRoll={this.startCharacterRoll}/>
+          </>
         )}
       </StyledButtonContainer>
     )

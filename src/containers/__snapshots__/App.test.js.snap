@@ -3,18 +3,18 @@
 exports[`renders correctly 1`] = `
 Array [
   <div
-    className="sc-bxivhb hgtYVQ"
+    className="sc-ifAKCX dyThAX"
   >
     WELCOME TO THE DNDLER
   </div>,
   <div
-    className="sc-ifAKCX jQlPKO"
-  >
-    -How to use the DNDler
-  </div>,
-  <div
     className="sc-htpNat blZjcx"
   >
+    <div
+      className="sc-bxivhb esVBWD"
+    >
+      -How to use the DNDler
+    </div>
     <img
       alt="Choose your fate..."
       className="sc-bdVaJa bymLFr"

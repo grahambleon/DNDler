@@ -8,10 +8,7 @@ const Title = styled.div`
   font-family: 'Milonga', cursive;
   font-size: 36px;
 `
-const Instructions = styled.div`
-  text-align: center;
-  margin: 10px;
-`
+
 
 class App extends Component {
   render() {
@@ -20,9 +17,6 @@ class App extends Component {
         <Title>
           WELCOME TO THE DNDLER
         </Title>
-        <Instructions>
-          -How to use the DNDler
-        </Instructions>
         <ButtonContainer />
       </>
     );
