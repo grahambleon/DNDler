@@ -2,8 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <img
-  alt="Choose your fate..."
-  className="sc-bdVaJa bymLFr"
+  className="sc-bdVaJa juMMxF"
   src="d20.png"
 />
 `;

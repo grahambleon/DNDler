@@ -3,21 +3,20 @@
 exports[`renders correctly 1`] = `
 Array [
   <div
-    className="sc-bxivhb hgtYVQ"
+    className="sc-EHOje hRETJx"
   >
     WELCOME TO THE DNDLER
   </div>,
   <div
-    className="sc-ifAKCX jQlPKO"
+    className="sc-bxivhb jOxwUP"
   >
-    -How to use the DNDler
-  </div>,
-  <div
-    className="sc-htpNat blZjcx"
-  >
+    <div
+      className="sc-ifAKCX jQlPKO"
+    >
+      Roll the dice and choose your fate...
+    </div>
     <img
-      alt="Choose your fate..."
-      className="sc-bdVaJa bymLFr"
+      className="sc-bdVaJa juMMxF"
       onClick={[Function]}
       src="d20.png"
     />

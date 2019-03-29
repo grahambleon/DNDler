@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import titleBackground from '../assets/titlebackground.png'
 import ButtonContainer from './ButtonContainer.js'
 
 const Title = styled.div`
   text-align: center;
-  margin: 10px;
-  font-family: 'Milonga', cursive;
+  background-image: url(${titleBackground});
+  margin: -20px;
+  padding-top: 50px;
+  padding-bottom: 40px;
   font-size: 36px;
+  box-shadow: 0 0 8px 4px #FFFBDD inset;
+  opacity: 0.9;
 `
-const Instructions = styled.div`
-  text-align: center;
-  margin: 10px;
-`
+
 
 class App extends Component {
   render() {
@@ -20,9 +22,6 @@ class App extends Component {
         <Title>
           WELCOME TO THE DNDLER
         </Title>
-        <Instructions>
-          -How to use the DNDler
-        </Instructions>
         <ButtonContainer />
       </>
     );
