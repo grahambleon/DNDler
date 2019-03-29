@@ -7,16 +7,18 @@ const StyledSheet = styled.div`
   text-align: center;
   margin: 10px;
 `
-const RerollButton = styled.div`
-  text-align: center;
-  margin: auto;
-  background-image: url(${d20});
-  background-size: cover;
-  width: 139px;
-  height: 160px;
-  resize: both;
-  border-width: 2px;
-  border: black;
+const RerollButton = styled.img`
+  width: 10vw;
+  &:hover {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, .5);
+  }
+  &:active {
+    background-color: rgba(140, 20, 252, .7);
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px 6px rgba(140, 20, 252, .7);
+  }
 `
 
 class CharacterSheet extends Component {
@@ -73,7 +75,7 @@ class CharacterSheet extends Component {
         <p>Class: {this.state.class}</p>
         <p>Background: {this.state.background}</p>
         <p>Stats: {statList}</p>
-        <RerollButton onClick={this.rollCharacter} />
+        <RerollButton src={d20} onClick={this.rollCharacter} />
       </StyledSheet>
     )
   }
