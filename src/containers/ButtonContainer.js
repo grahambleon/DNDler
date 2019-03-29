@@ -37,7 +37,7 @@ class ButtonContainer extends Component {
             <Instructions>
               Roll the dice and choose your fate...
             </Instructions>
-            <Button startCharacterRoll={this.startCharacterRoll}/>
+            <Button onClick={this.startCharacterRoll}/>
           </>
         )}
       </StyledButtonContainer>
