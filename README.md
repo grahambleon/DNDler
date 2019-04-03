@@ -9,7 +9,7 @@
 * Original concept by [Varun Nadgir](https://github.com/vanadgir)
 * Made with [create-react-app](https://github.com/facebook/create-react-app)
 
---
+
 ###Setup Instructions
 
 * Clone or download the repo.
