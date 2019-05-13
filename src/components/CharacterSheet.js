@@ -37,6 +37,17 @@ class CharacterSheet extends Component {
     const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk','Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard']
     const backgrounds = ['Acolyte', 'Charlatan', 'Criminal/Spy', 'Entertainer','Folk Hero', 'Gladiator', 'Guild Artisan/Guild Merchant', 'Hermit', 'Knight', 'Noble', 'Outlander', 'Pirate', 'Sage', 'Sailor', 'Soldier', 'Urchin']
 
+    const getName = () => {
+      //since the drycode names api has separate api endpoints for male/female names,
+      //we flip a coin here to see which one you get.
+      const coinFlip = Math.floor(Math.random() * 2)
+      const gender = coinFlip? "boy_names" : "girl_names"
+      fetch(`https://tranquil-oasis-13767.herokuapp.com/http://names.drycodes.com/1?nameOptions=${gender}`)
+        .then(response => response.json())
+        .then(body => console.log(body[0].replace('_', ' ')))
+    }
+    getName()
+
     const rollStat = () => {
       const randomInt = () => Math.floor(Math.random()*6) + 1
       const stat = [randomInt(), randomInt(), randomInt(), randomInt()]
