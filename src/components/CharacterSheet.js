@@ -20,6 +20,7 @@ class CharacterSheet extends Component {
   constructor(props){
     super(props)
     this.state = {
+      name: '',
       race: '',
       class: '',
       background: '',
@@ -36,7 +37,6 @@ class CharacterSheet extends Component {
     const races = ['Dragonborn', 'Dwarf', 'Elf', 'Gnome', 'Half-Elf', 'Halfling','Half-Orc', 'Human', 'Tiefling']
     const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk','Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard']
     const backgrounds = ['Acolyte', 'Charlatan', 'Criminal/Spy', 'Entertainer','Folk Hero', 'Gladiator', 'Guild Artisan/Guild Merchant', 'Hermit', 'Knight', 'Noble', 'Outlander', 'Pirate', 'Sage', 'Sailor', 'Soldier', 'Urchin']
-
     const rollStat = () => {
       const randomInt = () => Math.floor(Math.random()*6) + 1
       const stat = [randomInt(), randomInt(), randomInt(), randomInt()]
@@ -45,12 +45,24 @@ class CharacterSheet extends Component {
         stat.reduce((a, b) => a + b)
       )
     }
-    this.setState({
-      race: sample(races),
-      class: sample(classes),
-      background: sample(backgrounds),
-      stats: [rollStat(), rollStat(), rollStat(), rollStat(), rollStat(), rollStat()]
-    })
+    const getName = () => {
+      //since the drycode names api has separate api endpoints for male/female names,
+      //we flip a coin here to see which one you get.
+      const coinFlip = Math.floor(Math.random() * 2)
+      const gender = coinFlip? "boy_names" : "girl_names"
+      fetch(`https://tranquil-oasis-13767.herokuapp.com/http://names.drycodes.com/1?nameOptions=${gender}`)
+        .then(response => response.json())
+        .then(body => {
+          this.setState({
+            name: body[0].replace('_', ' '),
+            race: sample(races),
+            class: sample(classes),
+            background: sample(backgrounds),
+            stats: [rollStat(), rollStat(), rollStat(), rollStat(), rollStat(), rollStat()]
+          })
+        })
+    }
+    getName()
   }
 
   render() {
@@ -67,6 +79,7 @@ class CharacterSheet extends Component {
     return(
       <>
         <StyledSheet>
+          <span>Name: {this.state.name}</span>
           <span>Race: {this.state.race}</span>
           <span>Class: {this.state.class}</span>
           <span>Background: {this.state.background}</span>
