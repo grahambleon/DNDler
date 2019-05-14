@@ -73,11 +73,17 @@ class CharacterSheet extends Component {
     return(
       <>
         <StyledSheet>
-          <span>Name: {this.state.name}</span>
-          <span>Race: {this.state.race}</span>
-          <span>Class: {this.state.class}</span>
-          <span>Background: {this.state.background}</span>
-          <span>Stats: {statList}</span>
+          {this.state.name?(
+            <>
+              <span>Name: {this.state.name}</span>
+              <span>Race: {this.state.race}</span>
+              <span>Class: {this.state.class}</span>
+              <span>Background: {this.state.background}</span>
+              <span>Stats: {statList}</span>
+            </>
+          ):(
+            <span>Loading...</span>
+          )}
         </StyledSheet>
         <Button onClick={this.rollCharacter} />
       </>
