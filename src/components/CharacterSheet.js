@@ -66,14 +66,8 @@ class CharacterSheet extends Component {
   }
 
   render() {
-    let i = 0
-    const statList = this.state.stats.map((stat) => {
-      i++
-      if (i === 6) {
-        return(`${stat}`)
-      } else {
-        return(`${stat}, `)
-      }
+    const statList = this.state.stats.map((stat, index) => {
+      return(index===5?(`${stat}`):(`${stat}, `))
     })
 
     return(
