@@ -66,24 +66,24 @@ class CharacterSheet extends Component {
   }
 
   render() {
-    let i = 0
-    const statList = this.state.stats.map((stat) => {
-      i++
-      if (i === 6) {
-        return(`${stat}`)
-      } else {
-        return(`${stat}, `)
-      }
+    const statList = this.state.stats.map((stat, index) => {
+      return(index===5?(`${stat}`):(`${stat}, `))
     })
 
     return(
       <>
         <StyledSheet>
-          <span>Name: {this.state.name}</span>
-          <span>Race: {this.state.race}</span>
-          <span>Class: {this.state.class}</span>
-          <span>Background: {this.state.background}</span>
-          <span>Stats: {statList}</span>
+          {this.state.name?(
+            <>
+              <span>Name: {this.state.name}</span>
+              <span>Race: {this.state.race}</span>
+              <span>Class: {this.state.class}</span>
+              <span>Background: {this.state.background}</span>
+              <span>Stats: {statList}</span>
+            </>
+          ):(
+            <span>Loading...</span>
+          )}
         </StyledSheet>
         <Button onClick={this.rollCharacter} />
       </>
