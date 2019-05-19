@@ -16,9 +16,15 @@ class ButtonContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      clicked: false
+      clicked: false,
+      partySize: 1
     }
     this.startCharacterRoll = this.startCharacterRoll.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(event) {
+    this.setState({ partySize: event.target.value })
   }
 
   startCharacterRoll() {
@@ -28,10 +34,12 @@ class ButtonContainer extends Component {
   }
 
   render() {
+    let party = new Array(this.state.partySize).fill(<CharacterSheet />)
+    
     return(
       <StyledButtonContainer>
         {this.state.clicked?(
-          <CharacterSheet />
+          party
         ):(
           <>
             <Instructions>
