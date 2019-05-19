@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Button from './Button.js'
 const sample = require('lodash.sample');
 
 const StyledSheet = styled.div`
@@ -71,22 +70,19 @@ class CharacterSheet extends Component {
     })
 
     return(
-      <>
-        <StyledSheet>
-          {this.state.name?(
-            <>
-              <span>Name: {this.state.name}</span>
-              <span>Race: {this.state.race}</span>
-              <span>Class: {this.state.class}</span>
-              <span>Background: {this.state.background}</span>
-              <span>Stats: {statList}</span>
-            </>
-          ):(
-            <span>Loading...</span>
-          )}
-        </StyledSheet>
-        <Button onClick={this.rollCharacter} />
-      </>
+      <StyledSheet>
+        {this.state.name?(
+          <>
+            <span>Name: {this.state.name}</span>
+            <span>Race: {this.state.race}</span>
+            <span>Class: {this.state.class}</span>
+            <span>Background: {this.state.background}</span>
+            <span>Stats: {statList}</span>
+          </>
+        ):(
+          <span>Loading...</span>
+        )}
+      </StyledSheet>
     )
   }
 }

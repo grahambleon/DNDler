@@ -17,9 +17,10 @@ class ButtonContainer extends Component {
     super(props)
     this.state = {
       clicked: false,
-      partySize: 1
+      partySize: 1,
+      party: []
     }
-    this.startCharacterRoll = this.startCharacterRoll.bind(this)
+    this.roll = this.roll.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
 
@@ -27,25 +28,37 @@ class ButtonContainer extends Component {
     this.setState({ partySize: event.target.value })
   }
 
-  startCharacterRoll() {
+  roll() {
     this.setState({
-      clicked: true
+      clicked: true,
+      party: Array.from({length: this.state.partySize}, (_, i) => <CharacterSheet key={i} />)
     })
   }
 
   render() {
-    let party = new Array(this.state.partySize).fill(<CharacterSheet />)
-    
+    console.log(this.state);
     return(
       <StyledButtonContainer>
+        <span>Party size: </span>
+        <select onChange={this.handleChange}>
+          <option value={1}>1</option>
+          <option value={2}>2</option>
+          <option value={3}>3</option>
+          <option value={4}>4</option>
+          <option value={5}>5</option>
+          <option value={6}>6</option>
+        </select>
         {this.state.clicked?(
-          party
+          <>
+            {this.state.party}
+            <Button onClick={this.roll}/>
+          </>
         ):(
           <>
             <Instructions>
               Roll the dice and choose your fate...
             </Instructions>
-            <Button onClick={this.startCharacterRoll}/>
+            <Button onClick={this.roll}/>
           </>
         )}
       </StyledButtonContainer>
