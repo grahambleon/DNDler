@@ -31,12 +31,11 @@ class ButtonContainer extends Component {
   roll() {
     this.setState({
       clicked: true,
-      party: Array.from({length: this.state.partySize}, (_, i) => <CharacterSheet key={i} />)
+      party: Array.from({length: this.state.partySize}, (_, i) => <CharacterSheet key={Math.floor(Math.random()*1000)} />)
     })
   }
 
   render() {
-    console.log(this.state);
     return(
       <StyledButtonContainer>
         <span>Party size: </span>
