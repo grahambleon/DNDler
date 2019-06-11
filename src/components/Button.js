@@ -20,10 +20,12 @@ const StyledButton = styled.img`
 
 const Button = (props) => {
   return(
-    <StyledButton
-      src={d20}
-      onClick={props.onClick}
-    />
+    <div>
+      <StyledButton
+        src={d20}
+        onClick={props.onClick}
+      />
+    </div>
   )
 }
 

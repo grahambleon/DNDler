@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ButtonContainer from './ButtonContainer.js'
+import PartyContainer from './PartyContainer.js'
 
 it('renders', () => {
-  shallow(<ButtonContainer />)
+  shallow(<PartyContainer />)
 })
