@@ -7,6 +7,7 @@ const StyledSheet = styled.div`
   margin: auto;
   margin-bottom: 3%;
   width: 20%;
+  min-width: 20%;
   padding: 2%;
   background-color: rgba(160, 82, 44, .7);
   box-shadow: 3px 3px 5px 8px rgba(160, 82, 44, .7);

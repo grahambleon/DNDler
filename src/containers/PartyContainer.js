@@ -7,12 +7,8 @@ const StyledSmallPartyContainer = styled.div`
 
 const StyledLargePartyContainer = styled.div`
   margin: auto;
-  &::nth-child(even){
-    float: left;
-  }
-  &::nth-child(odd){
-    float: right;
-  }
+  column-count: 2;
+  width: 50%;
 `
 
 const PartyContainer = (props) => {
