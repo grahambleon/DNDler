@@ -8,18 +8,58 @@ Array [
     WELCOME TO THE DNDLER
   </div>,
   <div
-    className="sc-htpNat fYpaVb"
+    className="sc-EHOje jJoPBG"
   >
-    <div
-      className="sc-bxivhb esVBWD"
-    >
-      Roll the dice and choose your fate...
+    Roll the dice and choose your fate...
+    <div>
+      <label
+        htmlFor="partySize"
+      >
+        Party size: 
+      </label>
+      <select
+        id="partySize"
+        onChange={[Function]}
+      >
+        <option
+          value={1}
+        >
+          1
+        </option>
+        <option
+          value={2}
+        >
+          2
+        </option>
+        <option
+          value={3}
+        >
+          3
+        </option>
+        <option
+          value={4}
+        >
+          4
+        </option>
+        <option
+          value={5}
+        >
+          5
+        </option>
+        <option
+          value={6}
+        >
+          6
+        </option>
+      </select>
     </div>
-    <img
-      className="sc-bdVaJa kpUueE"
-      onClick={[Function]}
-      src="d20.png"
-    />
+    <div>
+      <img
+        className="sc-htpNat fHAYGW"
+        onClick={[Function]}
+        src="d20.png"
+      />
+    </div>
   </div>,
 ]
 `;

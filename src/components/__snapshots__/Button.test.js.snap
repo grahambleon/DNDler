@@ -1,8 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<img
-  className="sc-bdVaJa kpUueE"
-  src="d20.png"
-/>
+<div>
+  <img
+    className="sc-bdVaJa kpUueE"
+    src="d20.png"
+  />
+</div>
 `;
